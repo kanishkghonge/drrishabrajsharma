@@ -414,7 +414,7 @@ body {
     position: absolute;
     bottom: 80px;
     right: 0;
-    width: 350px;
+    width: 380px;
     background: var(--glass-bg);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
@@ -2074,12 +2074,12 @@ a[href*="whatsapp"].booking-btn:hover,
     }
     
     .logo::before {
-        width: 60px;
-        height: 60px;
+        width: 90px;
+        height: 90px;
     }
     
     .logo img {
-        height: 45px;
+        height: 75px;
     }
     
     .header-info {
@@ -2245,6 +2245,10 @@ a[href*="whatsapp"].booking-btn:hover,
         gap: 15px;
     }
     
+    .doctor-intro {
+        display: none;
+    }
+    
     .testimonial-card {
         padding: 20px 15px;
         margin: 10px 5px;
@@ -2396,6 +2400,10 @@ a[href*="whatsapp"].booking-btn:hover,
         display: none;
     }
     
+    .footer-logo {
+        display: none;
+    }
+    
     .footer-social {
         margin-bottom: 10px;
     }
@@ -2448,12 +2456,12 @@ a[href*="whatsapp"].booking-btn:hover,
     }
     
     .logo::before {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
     
     .logo img {
-        height: 38px;
+        height: 68px;
     }
     
     .hero {
@@ -2530,8 +2538,8 @@ a[href*="whatsapp"].booking-btn:hover,
     }
     
     .whatsapp-chat-widget {
-        width: 280px;
-        right: -5px;
+        width: 320px;
+        right: -10px;
     }
     
     .whatsapp-chat-widget.active {
@@ -2563,6 +2571,10 @@ a[href*="whatsapp"].booking-btn:hover,
     
     .doctor-text h2 {
         font-size: 1.8rem;
+    }
+    
+    .doctor-intro {
+        display: none;
     }
     
     .credentials-badges {
@@ -2663,21 +2675,8 @@ a[href*="whatsapp"].booking-btn:hover,
         gap: 12px;
     }
     
-    .footer-logo::before {
-        width: 50px;
-        height: 50px;
-        top: -6px;
-    }
-    
-    .footer-logo img {
-        height: 30px;
-        margin-bottom: 5px;
-    }
-    
-    .footer-logo p {
-        font-size: 0.75rem;
-        margin-bottom: 8px;
-        line-height: 1.3;
+    .footer-logo {
+        display: none;
     }
     
     .footer-links h3,

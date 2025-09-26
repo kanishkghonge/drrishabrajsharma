@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Aesthetics - Premier Dermatology Clinic in Greater Noida | Dr. Rishab Raj Sharma</title>
+    <meta name="description" content="Raj Aesthetics - The first and only clinic in Greater Noida run by MD Dermatology specialist. Expert laser procedures and aesthetic treatments.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Social Icons -->
+    <div class="social-float">
+        <div class="social-container">
+            <a href="https://www.instagram.com/docrishivocals" target="_blank" class="social-btn instagram-btn">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <div class="whatsapp-container">
+                <div class="whatsapp-chat-widget" id="whatsapp-chat">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="chat-info">
+                            <h4>Dr. Rishab Raj Sharma</h4>
+                            <p>Typically replies instantly</p>
+                        </div>
+                    </div>
+                    <div class="chat-body">
+                        <div class="chat-message">
+                            Hi! 👋 How can I help you today? Feel free to ask about our treatments or book an appointment.
+                        </div>
+                        <div class="chat-input-container">
+                            <input type="text" class="chat-input" id="chat-input" placeholder="Type your message..." maxlength="500">
+                            <button class="chat-send-btn" id="chat-send">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="social-btn whatsapp-btn" id="whatsapp-toggle">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="photos/logo (1).png" alt="Raj Aesthetics Logo">
+                </div>
+                
+                <div class="header-info">
+                    <div class="phone-number">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9797387668</span>
+                    </div>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#before-after">Before & After</a></li>
+                        <li><a href="#appointment">Book Appointment</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul class="mobile-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#before-after">Before & After</a></li>
+            <li><a href="#appointment">Book Appointment</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Excellence in Dermatology & Aesthetic Care</h1>
+                <p class="hero-subtitle">Greater Noida's first and only clinic run by an MD Dermatology specialist with cutting-edge laser technology and personalized treatment approaches</p>
+                
+                <div class="stats-counter">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1000">0</span>
+                        <span class="stat-label">Happy Patients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Procedures Done</span>
+                    </div>
+                </div>
+                
+                <a href="#appointment" class="cta-button">Book Your Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section id="before-after" class="before-after">
+        <div class="container">
+            <h2 class="section-title">Transformations That Speak</h2>
+            <p class="section-subtitle">Real results from our patients - witness the power of expert dermatological care</p>
+            
+            <div class="transformation-slideshow">
+                <div class="slideshow-container">
+                    <!-- Acne Scar Treatment Slide -->
+                    <div class="transformation-slide active" data-slide="0">
+                        <div class="slide-content">
+                            <div class="slide-header">
+                                <h3>Acne Scar Treatment</h3>
+                                <span class="treatment-badge">8 Sessions</span>
+                            </div>
+                            <div class="comparison-wrapper">
+                                <div class="before-after-images">
+                                    <div class="image-container before">
+                                        <img src="photos/acne scars before.png" alt="Before acne scar treatment">
+                                        <div class="image-label before-label">Before</div>
+                                    </div>
+                                    <div class="vs-divider">
+                                        <span>VS</span>
+                                    </div>
+                                    <div class="image-container after">
+                                        <img src="photos/acne scar after.png" alt="After acne scar treatment">
+                                        <div class="image-label after-label">After</div>
+                                    </div>
+                                </div>
+                                <div class="result-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-number">95%</span>
+                                        <span class="stat-text">Improvement</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">8</span>
+                                        <span class="stat-text">Sessions</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">2</span>
+                                        <span class="stat-text">Months</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Laser Hair Removal Slide -->
+                    <div class="transformation-slide" data-slide="1">
+                        <div class="slide-content">
+                            <div class="slide-header">
+                                <h3>Laser Hair Reduction</h3>
+                                <span class="treatment-badge">6 Sessions</span>
+                            </div>
+                            <div class="comparison-wrapper">
+                                <div class="before-after-images">
+                                    <div class="image-container before">
+                                        <img src="photos/laser hair redution before.png" alt="Before laser hair reduction">
+                                        <div class="image-label before-label">Before</div>
+                                    </div>
+                                    <div class="vs-divider">
+                                        <span>VS</span>
+                                    </div>
+                                    <div class="image-container after">
+                                        <img src="photos/laser hair reduction after.png" alt="After laser hair reduction">
+                                        <div class="image-label after-label">After</div>
+                                    </div>
+                                </div>
+                                <div class="result-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-number">100%</span>
+                                        <span class="stat-text">Hair Reduction</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">6</span>
+                                        <span class="stat-text">Sessions</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">2</span>
+                                        <span class="stat-text">Months</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skin Rejuvenation Slide -->
+                    <div class="transformation-slide" data-slide="2">
+                        <div class="slide-content">
+                            <div class="slide-header">
+                                <h3>Skin Rejuvenation</h3>
+                                <span class="treatment-badge">5 Sessions</span>
+                            </div>
+                            <div class="comparison-wrapper">
+                                <div class="before-after-images">
+                                    <div class="image-container before">
+                                        <img src="https://images.unsplash.com/photo-1594824956482-976f25e5b85a?w=400&h=300&fit=crop" alt="Before skin rejuvenation">
+                                        <div class="image-label before-label">Before</div>
+                                    </div>
+                                    <div class="vs-divider">
+                                        <span>VS</span>
+                                    </div>
+                                    <div class="image-container after">
+                                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=300&fit=crop" alt="After skin rejuvenation">
+                                        <div class="image-label after-label">After</div>
+                                    </div>
+                                </div>
+                                <div class="result-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-number">92%</span>
+                                        <span class="stat-text">Skin Improvement</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">5</span>
+                                        <span class="stat-text">Sessions</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">5</span>
+                                        <span class="stat-text">Months</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pigmentation Treatment Slide -->
+                    <div class="transformation-slide" data-slide="3">
+                        <div class="slide-content">
+                            <div class="slide-header">
+                                <h3>Pigmentation Treatment</h3>
+                                <span class="treatment-badge">4 Sessions</span>
+                            </div>
+                            <div class="comparison-wrapper">
+                                <div class="before-after-images">
+                                    <div class="image-container before">
+                                        <img src="https://images.unsplash.com/photo-1592948648531-7ce3b69eaa63?w=400&h=300&fit=crop" alt="Before pigmentation treatment">
+                                        <div class="image-label before-label">Before</div>
+                                    </div>
+                                    <div class="vs-divider">
+                                        <span>VS</span>
+                                    </div>
+                                    <div class="image-container after">
+                                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=300&fit=crop" alt="After pigmentation treatment">
+                                        <div class="image-label after-label">After</div>
+                                    </div>
+                                </div>
+                                <div class="result-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-number">96%</span>
+                                        <span class="stat-text">Pigment Reduction</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">4</span>
+                                        <span class="stat-text">Sessions</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">4</span>
+                                        <span class="stat-text">Months</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slideshow-controls">
+                    <button class="slide-btn prev-slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slide-indicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                        <span class="indicator" data-slide="3"></span>
+                    </div>
+                    <button class="slide-btn next-slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="transformation-cta">
+                <p>Ready to start your transformation journey?</p>
+                <a href="#appointment" class="transformation-btn">
+                    <span>Book Your Consultation</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <!-- Doctor Profile Section -->
+            <div class="doctor-profile">
+                <div class="doctor-text">
+                    <div class="doctor-intro">
+                        <h2 class="section-title">Meet Dr. Rishab Raj Sharma</h2>
+                        <p class="doctor-credentials">
+                            <i class="fas fa-graduation-cap"></i>
+                            MBBS, MD Dermatology
+                        </p>
+                        <div class="credentials-badges">
+                            <span class="badge"><i class="fas fa-star"></i> MD Specialist</span>
+                            <span class="badge"><i class="fas fa-award"></i> Board Certified</span>
+                            <span class="badge"><i class="fas fa-users"></i> 1000+ Patients</span>
+                        </div>
+                    </div>
+                    
+                    <p class="about-description">
+                        Dr. Rishab Raj Sharma is a distinguished dermatologist and the driving force behind Raj Aesthetics. 
+                        With his MD in Dermatology and years of specialized training, Dr. Sharma brings unparalleled expertise 
+                        to Greater Noida's aesthetic and dermatological care landscape.
+                    </p>
+                </div>
+                
+                <div class="doctor-image">
+                    <div class="doctor-card glass">
+                        <div class="image-wrapper">
+                            <img src="photos/doc photo.jpeg" alt="Dr. Rishab Raj Sharma">
+                            <div class="experience-badge">
+                                <span class="years">5+</span>
+                                <span class="label">Years Experience</span>
+                            </div>
+                        </div>
+                        <div class="doctor-details">
+                            <h4>Dr. Rishab Raj Sharma</h4>
+                            <p>MD Dermatology Specialist</p>
+                            <div class="achievement-stats">
+                                <div class="stat">
+                                    <span class="number">1000+</span>
+                                    <span class="text">Happy Patients</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">500+</span>
+                                    <span class="text">Procedures</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vision, Mission & Equipment Section -->
+            <div class="clinic-info">
+                <div class="vision-mission-section">
+                    <div class="vision glass">
+                        <div class="vision-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To provide world-class dermatological and aesthetic treatments with personalized care, 
+                        making advanced skin care accessible to everyone in Greater Noida and surrounding areas.</p>
+                    </div>
+                    
+                    <div class="mission glass">
+                        <div class="mission-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>Combining cutting-edge technology with compassionate care to deliver exceptional results 
+                        that boost confidence and enhance natural beauty.</p>
+                    </div>
+                </div>
+                
+                <div class="equipment-section">
+                    <h3><i class="fas fa-cogs"></i> State-of-the-Art Equipment</h3>
+                    <div class="equipment-grid">
+                        <div class="equipment-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Advanced Laser Hair Removal System</span>
+                        </div>
+                        <div class="equipment-item">
+                            <i class="fas fa-microscope"></i>
+                            <span>Fractional CO2 Laser for Skin Resurfacing</span>
+                        </div>
+                        <div class="equipment-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>IPL (Intense Pulsed Light) Technology</span>
+                        </div>
+                        <div class="equipment-item">
+                            <i class="fas fa-radio"></i>
+                            <span>Radiofrequency Skin Tightening</span>
+                        </div>
+                        <div class="equipment-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Chemical Peel Systems</span>
+                        </div>
+                        <div class="equipment-item">
+                            <i class="fas fa-spa"></i>
+                            <span>Microneedling RF Technology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Specialized Services</h2>
+            <p class="section-subtitle">Comprehensive dermatological and aesthetic treatments</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <h3>Laser Hair Removal</h3>
+                            <p>Advanced laser technology for permanent hair reduction with minimal discomfort and maximum results.</p>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Advanced laser technology for permanent hair reduction with minimal discomfort and maximum results. Safe for all skin types with long-lasting results.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <i class="fas fa-face-smile"></i>
+                            </div>
+                            <h3>Acne Treatment</h3>
+                            <p>Comprehensive acne management including chemical peels, laser therapy, and personalized skincare regimens.</p>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Comprehensive acne management including chemical peels, laser therapy, and personalized skincare regimens. Clear skin guaranteed.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <i class="fas fa-star-of-life"></i>
+                            </div>
+                            <h3>Skin Rejuvenation</h3>
+                            <p>Anti-aging treatments including laser resurfacing, microneedling, and advanced skincare procedures.</p>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Anti-aging treatments including laser resurfacing, microneedling, and advanced skincare procedures. Restore youthful glow.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3>Pigmentation Treatment</h3>
+                            <p>Effective treatment for melasma, dark spots, and uneven skin tone using cutting-edge laser technology.</p>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Effective treatment for melasma, dark spots, and uneven skin tone using cutting-edge laser technology. Even complexion restored.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <h3>Cosmetic Procedures</h3>
+                            <p>Botox, dermal fillers, and other minimally invasive cosmetic treatments for natural-looking results.</p>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Botox, dermal fillers, and other minimally invasive cosmetic treatments for natural-looking results. Enhance your beauty.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Medical Dermatology</h3>
+                            <p>Treatment of skin conditions including eczema, psoriasis, dermatitis, and other medical skin concerns.</p>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Treatment of skin conditions including eczema, psoriasis, dermatitis, and other medical skin concerns. Expert care for healthy skin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <div class="rating-info">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Rated 4.9 out of 5 by 250+ patients</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"Dr. Rishab is absolutely amazing! His laser hair removal treatment was painless and so effective. I can see great results after just 3 sessions. The clinic is very hygienic and professional."</p>
+                        <div class="testimonial-author">
+                            <strong>Priya Sharma</strong>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I had severe acne scars and Dr. Sharma's treatment completely transformed my skin. The fractional laser sessions were worth every penny. Highly recommend Raj Aesthetics!"</p>
+                        <div class="testimonial-author">
+                            <strong>Rahul Gupta</strong>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Best dermatologist in Greater Noida! Dr. Rishab explained everything clearly and the results exceeded my expectations. The clinic has the latest equipment and maintains excellent hygiene standards."</p>
+                        <div class="testimonial-author">
+                            <strong>Anita Verma</strong>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I struggled with pigmentation for years. Dr. Sharma's IPL treatment worked like magic! My skin is now clear and glowing. The staff is also very caring and professional."</p>
+                        <div class="testimonial-author">
+                            <strong>Kavita Singh</strong>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Excellent experience at Raj Aesthetics! Dr. Rishab is very knowledgeable and uses the latest technology. My skin rejuvenation treatment gave me amazing results. Truly the best clinic in Greater Noida!"</p>
+                        <div class="testimonial-author">
+                            <strong>Mohit Agarwal</strong>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="google-reviews">
+                <a href="https://www.google.com/search?sxsrf=AE3TifNlx4lCyakS1QYrz3nsGhj2605-Hw:1758877393239&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-ExKXAO01jSkMbIS_P115gPsoHC1ty4hl2rtU5BTJjhFWrbUoxIYWXfJIo2BpHmTxwIRwUZ2ktglem5MlILRwY_d8KJx9&q=RAJ+AESTHETICS+Reviews&zx=1758895035473&no_sw_cr=1" 
+                   target="_blank" class="google-btn">
+                    <i class="fab fa-google"></i>
+                    View More Reviews on Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Appointment Section -->
+    <section id="appointment" class="appointment">
+        <div class="container">
+            <h2 class="section-title">Book Your Appointment</h2>
+            <p class="section-subtitle">Choose your preferred way to book</p>
+            
+            <div class="appointment-content">
+                <div class="timings">
+                    <h3>Clinic Timings</h3>
+                    <div class="timing-grid">
+                        <div class="timing-item">
+                            <span class="day">Monday</span>
+                            <span class="time">4:30 PM - 9:00 PM</span>
+                        </div>
+                        <div class="timing-item">
+                            <span class="day">Tuesday</span>
+                            <span class="time">4:30 PM - 9:00 PM</span>
+                        </div>
+                        <div class="timing-item">
+                            <span class="day">Wednesday</span>
+                            <span class="time">4:30 PM - 9:00 PM</span>
+                        </div>
+                        <div class="timing-item">
+                            <span class="day">Thursday</span>
+                            <span class="time">4:30 PM - 9:00 PM</span>
+                        </div>
+                        <div class="timing-item">
+                            <span class="day">Friday</span>
+                            <span class="time">4:30 PM - 9:00 PM</span>
+                        </div>
+                        <div class="timing-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">4:30 PM - 9:00 PM</span>
+                        </div>
+                        <div class="timing-item closed">
+                            <span class="day">Sunday</span>
+                            <span class="time">Closed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="appointment-cta">
+                    <h3>Book Your Appointment</h3>
+                    <p>Choose your preferred way to book</p>
+                    
+                    <div class="booking-buttons">
+                        <button class="booking-btn online-btn" id="online-booking">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Book Appointment Online</span>
+                        </button>
+                        
+                        <a href="tel:+919797387668" class="booking-btn call-btn">
+                            <i class="fas fa-phone"></i>
+                            <span>Book by Calling</span>
+                        </a>
+                        
+                        <a href="https://wa.me/919797387668?text=Hi%20Dr.%20Rishab,%20I%20would%20like%20to%20book%20an%20appointment." 
+                           target="_blank" class="booking-btn whatsapp-booking-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Book via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We're here to help you achieve your skin goals</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+919797387668">+91 9797387668</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:info@rajaesthetics.com">info@rajaesthetics.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>Shop No. 22, Basement, Satym Complex 1, 2, Alfa Marg, Greater Noida, Uttar Pradesh 201308</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Follow Us</h3>
+                            <a href="https://www.instagram.com/docrishivocals" target="_blank">@docrishivocals</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.3687475678956!2d77.51633931508075!3d28.478166682466088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceb7b4bebcdd5%3A0x928f79986d705672!2sRAJ%20AESTHETICS!5e0!3m2!1sen!2sin!4v1695795432109!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="photos/logo (1).png" alt="Raj Aesthetics Logo">
+                    <p>Excellence in Dermatology & Aesthetic Care</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#appointment">Book Appointment</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +91 9797387668</p>
+                    <p><i class="fas fa-envelope"></i> info@rajaesthetics.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Greater Noida, UP</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/docrishivocals" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919797387668" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Raj Aesthetics. All rights reserved. | Designed and maintained by <a href="https://medcortico.com" target="_blank" rel="noopener noreferrer" class="medcortico-link">medcortico</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

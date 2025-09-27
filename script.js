@@ -20,10 +20,36 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initAnimationObserver();
     initServiceCards();
+    
+    // Start counter animation immediately when page loads
+    setTimeout(() => {
+        animateStats();
+        statsAnimated = true;
+    }, 1000); // Start after 1 second delay for better visual effect
 });
 
 // Header scroll effect
 function initScrollEffects() {
+    // Keep the IntersectionObserver as backup but don't rely on it for initial animation
+    const statsCounter = document.querySelector('.stats-counter');
+    
+    if (statsCounter) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Only trigger if not already animated
+                if (entry.isIntersecting && !statsAnimated) {
+                    animateStats();
+                    statsAnimated = true;
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -10% 0px'
+        });
+        
+        observer.observe(statsCounter);
+    }
+    
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
@@ -32,12 +58,6 @@ function initScrollEffects() {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
-        }
-        
-        // Animate stats counter when in view
-        if (!statsAnimated && isElementInViewport(document.querySelector('.stats-counter'))) {
-            animateStats();
-            statsAnimated = true;
         }
     });
 }

@@ -115,24 +115,24 @@ body {
     z-index: 1000;
     padding: 20px 0;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     height: 100px;
 }
 
 .header.scrolled {
     background: linear-gradient(135deg, 
-        rgba(212, 165, 116, 0.9), 
-        rgba(233, 30, 99, 0.8), 
-        rgba(245, 166, 184, 0.85), 
-        rgba(232, 196, 160, 0.9)
+        rgba(165, 140, 115, 0.4), 
+        rgba(180, 70, 120, 0.35), 
+        rgba(190, 150, 170, 0.4), 
+        rgba(180, 160, 140, 0.45)
     );
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 20px rgba(31, 38, 135, 0.12);
 }
 
 .header-content {
@@ -156,12 +156,12 @@ body {
     position: absolute;
     width: 85px;
     height: 85px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     z-index: -1;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .logo img {
@@ -184,12 +184,12 @@ body {
     gap: 8px;
     color: var(--text-dark);
     font-weight: 500;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(245, 245, 245, 0.75);
     padding: 8px 15px;
     border-radius: 25px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .phone-number i {

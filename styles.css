@@ -16,6 +16,13 @@ body {
     overflow-x: hidden;
 }
 
+/* Global Heading Font (fancy, non-cursive) */
+h1, h2, h3, h4, h5, h6, .section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -152,20 +159,12 @@ body {
 }
 
 .logo::before {
-    content: '';
-    position: absolute;
-    width: 85px;
-    height: 85px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    z-index: -1;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    /* Remove white circle behind logo */
+    display: none;
 }
 
 .logo img {
-    height: 70px;
+    height: 84px; /* slightly bigger logo */
     width: auto;
     transition: all 0.3s ease;
     position: relative;
@@ -403,6 +402,16 @@ body {
     left: 100%;
 }
 
+/* Force hero block to align to the left of the viewport, not centered */
+.hero .container {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: 0; /* override .container centering */
+    margin-right: auto;
+    padding-left: 20px; /* keep site-wide gutter */
+    padding-right: 20px;
+}
+
 .whatsapp-container {
     position: relative;
     display: flex;
@@ -567,49 +576,191 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    padding-top: 120px; /* Adjusted padding-top */
+    padding-bottom: 50px; /* Adjusted padding-bottom */
+    min-height: 80vh; /* Adjusted minimum height for better content fit */
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 120px;
+    align-items: flex-start;
+    /* Fixed background image on the hero itself */
+    background: url('photos/landing page.png') no-repeat center center / cover fixed;
 }
 
 .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, 
-        #d4a574, 
-        #e91e63, 
-        #f8bbd9, 
-        #e8c4a0, 
-        #f5a6b8, 
-        #c19a6b, 
-        #f5e6d3
-    );
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-    z-index: -1;
+    /* No longer used; background now applied to .hero */
+    display: none;
 }
 
-.hero-background::before {
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(1px);
+    /* Pink hue overlay: darker & more opaque on the left, lighter & more transparent on the right */
+    background: linear-gradient(90deg,
+        rgba(233, 30, 99, 0.65) 0%,
+        rgba(233, 30, 99, 0.48) 25%,
+        rgba(245, 166, 184, 0.28) 55%,
+        rgba(245, 166, 184, 0.12) 75%,
+        rgba(245, 166, 184, 0.04) 100%
+    );
+    backdrop-filter: blur(2px);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero-content {
-    text-align: center;
-    color: var(--text-dark);
+    text-align: left;
+    color: var(--white);
     animation: fadeInUp 1s ease;
+    max-width: 650px;
+    margin-left: 0;
+    padding-left: 0; /* remove leftover padding */
+}
+
+/* Ensure hero content sits above overlay */
+.hero .container,
+.hero-grid,
+.hero-left {
+    position: relative;
+    z-index: 1;
+}
+
+/* New Hero Grid Layout */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* single column since right image removed */
+    gap: 16px;
+    align-items: start;
+    justify-items: start; /* ensure children align left */
+    width: 100%;
+}
+
+.hero-left {
+    color: var(--white);
+    padding-left: 0;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 6px;
+}
+
+.hero-logo {
+    width: 420px; /* make the heading image much bigger */
+    height: auto;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    /* Render the logo as pure white regardless of original colors */
+    filter: brightness(0) invert(1) saturate(0) contrast(1000%);
+}
+
+.hero-brand-text .raj-aesthetics {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+}
+
+.hero-brand-text .revolutionizing-tagline {
+    font-size: 0.95rem;
+    color: var(--white);
+    opacity: 0.9;
+    margin-top: -2px;
+}
+
+.skin-clinic {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    margin: 8px 0 6px;
+    color: var(--white);
+}
+
+.services-list {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--white);
+    margin: 2px 0 14px;
+}
+
+/* Hero counters aligned left */
+.hero .stats-counter {
+    justify-content: flex-start;
+    gap: 24px;
+    margin: 16px 0;
+    padding: 14px 18px;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero .stat-item {
+    text-align: left;
+}
+
+.hero .stat-number {
+    color: #ffd6e6; /* slightly softer white-pink for contrast */
+}
+
+.hero-cta {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-doctor-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 22px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .skin-clinic {
+    font-size: 2.6rem;
+  }
+  .hero-logo {
+    width: 300px;
+    height: auto;
+  }
+  .hero {
+    min-height: 70vh;
+    /* Show only part of the image on mobile */
+    background-position: 15% 30%;
+    background-size: 200% auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 65vh;
+    background-position: 20% 35%;
+    background-size: 240% auto;
+  }
 }
 
 .hero-title {
@@ -1284,11 +1435,64 @@ section {
     background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(245, 230, 211, 0.1));
 }
 
+/* Plain Services Listing Section (above footer) */
+.services-listing {
+    background: linear-gradient(135deg, rgba(212,165,116,0.06), rgba(233,30,99,0.06));
+    padding: 60px 0;
+}
+
+.services-listing .section-title {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.simple-services-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 30px;
+}
+
+.simple-services-col {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.simple-services-col li {
+    color: var(--text-dark);
+    padding: 6px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.08);
+}
+
+@media (max-width: 900px) {
+  .simple-services-columns { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 540px) {
+  .simple-services-columns { grid-template-columns: 1fr; }
+}
+
+.services-columns {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px 24px;
+    width: 100%;
+    align-items: start;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
+    align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
 }
 
 .service-card {
@@ -2046,6 +2250,22 @@ a[href*="whatsapp"].booking-btn:hover,
         gap: 20px;
         padding: 20px;
     }
+
+    .hero-content .skin-clinic {
+        font-size: 4rem;
+    }
+
+    .hero-content .raj-aesthetics {
+        font-size: 3rem;
+    }
+
+    .hero-content .doctor-name {
+        font-size: 2.2rem;
+    }
+
+    .hero-content .appointment-number {
+        font-size: 1.6rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2107,8 +2327,8 @@ a[href*="whatsapp"].booking-btn:hover,
     }
     
     .hero {
-        padding-top: 110px;
-        min-height: 90vh;
+        padding-top: 150px;
+        padding-bottom: 60px;
     }
     
     .hero-title {
@@ -2429,6 +2649,27 @@ a[href*="whatsapp"].booking-btn:hover,
     section {
         padding: 60px 0;
     }
+
+    .hero-content .skin-clinic {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+
+    .hero-content .raj-aesthetics {
+        font-size: 2.5rem;
+    }
+
+    .hero-content .doctor-name {
+        font-size: 1.8rem;
+    }
+
+    .hero-content .appointment-number {
+        font-size: 1.4rem;
+    }
+
+    .hero-content .services-list {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2465,8 +2706,8 @@ a[href*="whatsapp"].booking-btn:hover,
     }
     
     .hero {
-        padding-top: 100px;
-        min-height: 85vh;
+        padding-top: 120px;
+        padding-bottom: 40px;
     }
     
     .hero-title {
@@ -2715,6 +2956,27 @@ a[href*="whatsapp"].booking-btn:hover,
     section {
         padding: 50px 0;
     }
+
+    .hero-content .skin-clinic {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-content .raj-aesthetics {
+        font-size: 2rem;
+    }
+
+    .hero-content .doctor-name {
+        font-size: 1.5rem;
+    }
+
+    .hero-content .appointment-number {
+        font-size: 1.2rem;
+    }
+
+    .hero-content .services-list {
+        font-size: 0.9rem;
+    }
 }
 
 /* Smooth scrolling enhancement */
@@ -2732,5 +2994,198 @@ a[href*="whatsapp"].booking-btn:hover,
     .slide-up.visible {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* New Landing Page Styles */
+.hero-content .raj-aesthetics {
+    font-family: 'Sacramento', cursive; /* Fancier script-like font */
+    font-size: 5rem; /* Increased font size */
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.hero-content .revolutionizing-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem; /* Slightly increased font size */
+    color: var(--white);
+    margin-bottom: 25px; /* Increased margin */
+    opacity: 0.9;
+}
+
+.hero-content .skin-clinic {
+    font-family: 'Oswald', sans-serif; /* Strong, bold font */
+    font-size: 5.5rem; /* Increased font size */
+    color: var(--white);
+    margin-bottom: 25px; /* Increased margin */
+    letter-spacing: 6px; /* Increased letter spacing */
+    text-transform: uppercase;
+}
+
+.hero-content .services-list {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem; /* Slightly increased font size */
+    color: var(--white);
+    margin-bottom: 40px; /* Increased margin */
+    max-width: 600px; /* Adjusted max-width */
+    line-height: 1.6;
+}
+
+.hero-content .doctor-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem; /* Increased font size */
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+
+.hero-content .doctor-credentials,
+.hero-content .doctor-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem; /* Slightly increased font size */
+    color: var(--white);
+    margin-bottom: 8px; /* Adjusted margin */
+    opacity: 0.95;
+}
+
+.hero-content .appointment-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem; /* Increased font size */
+    color: var(--primary-color);
+    margin-top: 35px;
+    letter-spacing: 1.2px;
+}
+
+.hero-cta {
+    margin-top: 40px; /* Space above the button */
+    margin-left: 0; /* Ensure button is left-aligned */
+    display: inline-block;
+    padding: 18px 45px;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, var(--vibrant-pink), var(--rose-gold));
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+}
+
+.hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(233, 30, 99, 0.4);
+}
+
+/* Responsive adjustments for new hero content */
+@media (max-width: 1024px) {
+    .hero-content {
+        padding-left: 20px;
+        max-width: 550px;
+    }
+
+    .hero-content .skin-clinic {
+        font-size: 4.5rem;
+        letter-spacing: 5px;
+    }
+
+    .hero-content .raj-aesthetics {
+        font-size: 4rem;
+    }
+
+    .hero-content .doctor-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-content .appointment-number {
+        font-size: 1.8rem;
+    }
+
+    .hero-cta {
+        padding: 15px 35px;
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 40px;
+        min-height: 70vh;
+    }
+
+    .hero-content {
+        padding-left: 15px;
+        max-width: 100%;
+    }
+
+    .hero-content .skin-clinic {
+        font-size: 3.5rem;
+        letter-spacing: 4px;
+    }
+
+    .hero-content .raj-aesthetics {
+        font-size: 3rem;
+    }
+
+    .hero-content .doctor-name {
+        font-size: 2rem;
+    }
+
+    .hero-content .appointment-number {
+        font-size: 1.6rem;
+    }
+
+    .hero-content .services-list {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+
+    .hero-cta {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        min-height: 60vh;
+    }
+
+    .hero-content {
+        padding-left: 10px;
+    }
+
+    .hero-content .skin-clinic {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .hero-content .raj-aesthetics {
+        font-size: 2.5rem;
+    }
+
+    .hero-content .doctor-name {
+        font-size: 1.6rem;
+    }
+
+    .hero-content .appointment-number {
+        font-size: 1.3rem;
+    }
+
+    .hero-content .services-list {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .hero-cta {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        margin-top: 20px;
     }
 }

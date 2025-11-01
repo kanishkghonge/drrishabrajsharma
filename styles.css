@@ -738,29 +738,54 @@ h1, h2, h3, h4, h5, h6, .section-title {
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 12px;
   }
   .skin-clinic {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
+    margin: 6px 0 4px;
   }
   .hero-logo {
-    width: 300px;
+    width: 260px;
     height: auto;
   }
   .hero {
-    min-height: 70vh;
+    min-height: 68vh;
     /* Show only part of the image on mobile */
     background-position: 15% 30%;
     background-size: 200% auto;
   }
+  .services-list {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 4px 0 10px;
+  }
+  .hero .stats-counter {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  .hero .stat-number { font-size: 1.4rem; }
+  .hero .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.9); }
+  .hero-cta { width: 100%; text-align: center; padding: 14px 20px; margin-top: 10px; }
 }
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 65vh;
+    min-height: 62vh;
     background-position: 20% 35%;
     background-size: 240% auto;
   }
+  .hero-logo { width: 220px; }
+  .skin-clinic { font-size: 1.9rem; }
+  .services-list { font-size: 0.9rem; }
+  .hero .stats-counter {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .hero .stat-number { font-size: 1.25rem; }
+  .hero .stat-label { font-size: 0.72rem; }
+  .hero .container { padding-left: 16px; padding-right: 16px; }
 }
 
 .hero-title {

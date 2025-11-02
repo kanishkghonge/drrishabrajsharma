@@ -947,6 +947,34 @@ section {
     margin-bottom: 25px;
 }
 
+/* Mobile fixes for Before & After */
+@media (max-width: 600px) {
+  .slideshow-container {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .slide-header {
+    margin-bottom: 16px;
+  }
+  .slide-header h3 {
+    font-size: 1.3rem;
+  }
+  .treatment-badge {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  .before-after-images {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .vs-divider { display: none; }
+  .result-stats {
+    gap: 12px;
+    padding: 12px;
+    flex-wrap: wrap;
+  }
+}
+
 .image-container {
     position: relative;
     border-radius: 15px;
@@ -1504,6 +1532,14 @@ section {
 
 @media (max-width: 540px) {
   .simple-services-columns { grid-template-columns: 1fr; }
+}
+
+/* Extra mobile polish for plain services section */
+@media (max-width: 600px) {
+  .services-listing { padding: 40px 0; }
+  .services-listing .section-title { text-align: center; }
+  .simple-services-columns { gap: 8px 16px; }
+  .simple-services-col li { font-size: 0.95rem; padding: 8px 0; }
 }
 
 .services-columns {

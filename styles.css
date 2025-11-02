@@ -750,9 +750,11 @@ h1, h2, h3, h4, h5, h6, .section-title {
   }
   .hero {
     min-height: 68vh;
-    /* Show only part of the image on mobile */
+    /* iOS fix: disable fixed background on mobile to prevent disappearing */
+    background-attachment: scroll !important;
     background-position: 15% 30%;
     background-size: 200% auto;
+    background-repeat: no-repeat;
   }
   .services-list {
     font-size: 0.95rem;
@@ -773,8 +775,10 @@ h1, h2, h3, h4, h5, h6, .section-title {
 @media (max-width: 480px) {
   .hero {
     min-height: 62vh;
+    background-attachment: scroll !important;
     background-position: 20% 35%;
     background-size: 240% auto;
+    background-repeat: no-repeat;
   }
   .hero-logo { width: 220px; }
   .skin-clinic { font-size: 1.9rem; }

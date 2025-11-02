@@ -747,6 +747,7 @@ h1, h2, h3, h4, h5, h6, .section-title {
   .hero-logo {
     width: 260px;
     height: auto;
+    margin-top: 14px; /* move heading image a bit lower */
   }
   .hero {
     min-height: 68vh;
@@ -769,7 +770,7 @@ h1, h2, h3, h4, h5, h6, .section-title {
     padding: 10px 12px;
   }
   /* Hide the 3rd stat (Years Experience) on mobile */
-  .hero .stats-counter .stat-item:nth-child(3) { display: none; }
+  .hero .stats-counter > .stat-item:nth-of-type(3) { display: none !important; }
   .hero .stat-number { font-size: 1.4rem; }
   .hero .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.9); }
   .hero-cta { width: 100%; text-align: center; padding: 14px 20px; margin-top: 10px; }
@@ -784,7 +785,7 @@ h1, h2, h3, h4, h5, h6, .section-title {
     background-size: 240% auto;
     background-repeat: no-repeat;
   }
-  .hero-logo { width: 220px; }
+  .hero-logo { width: 220px; margin-top: 16px; }
   .skin-clinic { font-size: 1.9rem; }
   .services-list { font-size: 0.9rem; }
   .hero .stats-counter {

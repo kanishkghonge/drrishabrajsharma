@@ -750,9 +750,10 @@ h1, h2, h3, h4, h5, h6, .section-title {
   }
   .hero {
     min-height: 68vh;
+    padding-top: 150px; /* push content and background below fixed header */
     /* iOS fix: disable fixed background on mobile to prevent disappearing */
     background-attachment: scroll !important;
-    background-position: 15% 30%;
+    background-position: 15% 42%;
     background-size: 200% auto;
     background-repeat: no-repeat;
   }
@@ -767,6 +768,8 @@ h1, h2, h3, h4, h5, h6, .section-title {
     gap: 10px;
     padding: 10px 12px;
   }
+  /* Hide the 3rd stat (Years Experience) on mobile */
+  .hero .stats-counter .stat-item:nth-child(3) { display: none; }
   .hero .stat-number { font-size: 1.4rem; }
   .hero .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.9); }
   .hero-cta { width: 100%; text-align: center; padding: 14px 20px; margin-top: 10px; }
@@ -775,8 +778,9 @@ h1, h2, h3, h4, h5, h6, .section-title {
 @media (max-width: 480px) {
   .hero {
     min-height: 62vh;
+    padding-top: 160px; /* a bit more space on very small screens */
     background-attachment: scroll !important;
-    background-position: 20% 35%;
+    background-position: 20% 45%;
     background-size: 240% auto;
     background-repeat: no-repeat;
   }
